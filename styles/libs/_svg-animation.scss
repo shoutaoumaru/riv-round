@@ -1,0 +1,61 @@
+.cls-1 {
+  fill: #231815;
+}
+
+.cls-2 {
+  fill: #070102;
+}
+
+.cls-3 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 14px;
+  opacity: 1;
+}
+
+.svg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: byeOpening 5s forwards;
+
+  & .svg-inner {
+    padding: 10vw;
+    margin: 0 auto;
+
+    & svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.outview.svg-animation {
+  transition: all 2s;
+  display: none;
+}
+
+@keyframes byeOpening {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}

@@ -10,18 +10,14 @@ class TextAnimation2 {
 //ページロード時のテキストアニメーション
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
-    const loadAnimation = document.querySelector('.clip-text01');
+    const loadAnimation = document.querySelector('.clip-js1');
     loadAnimation.classList.toggle('reveal');
+  }, 5000);
 
-  }, 1850);
-});
-document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(() => {
-    const loadAnimation2 = document.querySelector('.clip-text02');
-    loadAnimation2.classList.toggle('reveal');
-    const loadAnimation3 = document.querySelector('.clip-text03');
-    loadAnimation3.classList.toggle('reveal');
-    const loadAnimation4 = document.querySelector('.clip-text04');
-    loadAnimation4.classList.toggle('reveal');
-  }, 2500);
+  const loadAnimation2 = document.querySelectorAll('.clip-js2');
+  loadAnimation2.forEach(function (element) {
+    setTimeout(() => {
+      element.classList.add("reveal");
+    }, 6000)
+  });
 });

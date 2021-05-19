@@ -1,4 +1,86 @@
 @charset "UTF-8";
+.cls-1 {
+  fill: #231815;
+}
+
+.cls-2 {
+  fill: #070102;
+}
+
+.cls-3 {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 14px;
+  opacity: 1;
+}
+
+.svg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: byeOpening 5s forwards;
+          animation: byeOpening 5s forwards;
+}
+
+.svg-animation .svg-inner {
+  padding: 10vw;
+  margin: 0 auto;
+}
+
+.svg-animation .svg-inner svg {
+  height: 100%;
+  width: 100%;
+}
+
+.outview.svg-animation {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  display: none;
+}
+
+@-webkit-keyframes byeOpening {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes byeOpening {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
 body {
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -555,8 +637,9 @@ Stylesheet: ベーススタイル
 }
 
 body {
-  background-color: #FFF;
+  background-color: #fafafa;
   color: #333;
+  text-align: center;
 }
 
 .shutter {
@@ -565,41 +648,29 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2b2c30;
-  z-index: 99999;
-  -webkit-animation: byeShutter 2.5s forwards;
-          animation: byeShutter 2.5s forwards;
+  background-color: #395f91;
+  z-index: 9999;
+  -webkit-animation: byeShutter 2.6s forwards;
+          animation: byeShutter 2.6s forwards;
 }
 
-.shutter::before, .shutter::after {
+.shutter::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   margin: auto;
-}
-
-.shutter::before {
-  background-color: #d1e2e2;
+  background-color: #fff;
   width: 0;
   height: 1px;
-  -webkit-animation: shutterOpen1 2.5s forwards;
-          animation: shutterOpen1 2.5s forwards;
-}
-
-.shutter::after {
-  width: 120%;
-  height: 0;
-  margin-left: -10%;
-  background-color: #f3f3f3;
-  -webkit-animation: shutterOpen2 2.5s forwards;
-          animation: shutterOpen2 2.5s forwards;
+  -webkit-animation: shutterOpen 2.6s forwards;
+          animation: shutterOpen 2.6s forwards;
 }
 
 .content {
-  -webkit-animation: contentScale 2.5s forwards;
-          animation: contentScale 2.5s forwards;
+  -webkit-animation: contentScale 2.6s forwards;
+          animation: contentScale 2.6s forwards;
 }
 
 @-webkit-keyframes byeShutter {
@@ -624,7 +695,7 @@ body {
   }
 }
 
-@-webkit-keyframes shutterOpen1 {
+@-webkit-keyframes shutterOpen {
   0% {
     width: 0;
     height: 1px;
@@ -643,7 +714,7 @@ body {
   }
 }
 
-@keyframes shutterOpen1 {
+@keyframes shutterOpen {
   0% {
     width: 0;
     height: 1px;
@@ -659,48 +730,6 @@ body {
   100% {
     width: 100%;
     height: 100%;
-  }
-}
-
-@-webkit-keyframes shutterOpen2 {
-  60% {
-    width: 120%;
-    height: 0;
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-  }
-  90% {
-    width: 120%;
-    height: 100%;
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
-  }
-  100% {
-    width: 120%;
-    height: 100%;
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
-  }
-}
-
-@keyframes shutterOpen2 {
-  60% {
-    width: 120%;
-    height: 0;
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-  }
-  90% {
-    width: 120%;
-    height: 100%;
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
-  }
-  100% {
-    width: 120%;
-    height: 100%;
-    -webkit-transform: rotate(-5deg);
-            transform: rotate(-5deg);
   }
 }
 
@@ -795,92 +824,72 @@ body {
   }
 }
 
-.clip-text,
-.clip-text01,
-.clip-text02,
-.clip-text03,
-.clip-text04 {
+.clip-js1,
+.clip-js2,
+.clip-text {
   -webkit-transition: all 3s ease;
   transition: all 3s ease;
 }
 
-.clip-text.left,
-.clip-text01.left,
-.clip-text02.left,
-.clip-text03.left,
-.clip-text04.left {
+.clip-js1.left,
+.clip-js2.left,
+.clip-text.left {
   -webkit-clip-path: inset(0 100% 0 0);
           clip-path: inset(0 100% 0 0);
 }
 
-.clip-text.right,
-.clip-text01.right,
-.clip-text02.right,
-.clip-text03.right,
-.clip-text04.right {
+.clip-js1.right,
+.clip-js2.right,
+.clip-text.right {
   -webkit-clip-path: inset(0 0 0 100%);
           clip-path: inset(0 0 0 100%);
 }
 
-.clip-text.top,
-.clip-text01.top,
-.clip-text02.top,
-.clip-text03.top,
-.clip-text04.top {
+.clip-js1.top,
+.clip-js2.top,
+.clip-text.top {
   -webkit-clip-path: inset(0 0 100% 0);
           clip-path: inset(0 0 100% 0);
 }
 
-.clip-text.top-left,
-.clip-text01.top-left,
-.clip-text02.top-left,
-.clip-text03.top-left,
-.clip-text04.top-left {
+.clip-js1.top-left,
+.clip-js2.top-left,
+.clip-text.top-left {
   -webkit-clip-path: inset(0 100% 100% 0);
           clip-path: inset(0 100% 100% 0);
 }
 
-.clip-text.bottom,
-.clip-text01.bottom,
-.clip-text02.bottom,
-.clip-text03.bottom,
-.clip-text04.bottom {
+.clip-js1.bottom,
+.clip-js2.bottom,
+.clip-text.bottom {
   -webkit-clip-path: inset(100% 0 0 0);
           clip-path: inset(100% 0 0 0);
 }
 
-.clip-text.center,
-.clip-text01.center,
-.clip-text02.center,
-.clip-text03.center,
-.clip-text04.center {
+.clip-js1.center,
+.clip-js2.center,
+.clip-text.center {
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
 }
 
-.clip-text.circle,
-.clip-text01.circle,
-.clip-text02.circle,
-.clip-text03.circle,
-.clip-text04.circle {
+.clip-js1.circle,
+.clip-js2.circle,
+.clip-text.circle {
   -webkit-clip-path: circle(0 at 50% 50%);
           clip-path: circle(0 at 50% 50%);
 }
 
-.clip-text.skew,
-.clip-text01.skew,
-.clip-text02.skew,
-.clip-text03.skew,
-.clip-text04.skew {
+.clip-js1.skew,
+.clip-js2.skew,
+.clip-text.skew {
   -webkit-clip-path: polygon(0 0, 0 0, 0 0);
           clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-.clip-text.transform,
-.clip-text01.transform,
-.clip-text02.transform,
-.clip-text03.transform,
-.clip-text04.transform {
+.clip-js1.transform,
+.clip-js2.transform,
+.clip-text.transform {
   -webkit-clip-path: polygon(0 0, 0 0, 0 0);
           clip-path: polygon(0 0, 0 0, 0 0);
   -webkit-transition: all 1.4s cubic-bezier(0.55, 0.06, 0.33, 1.85);
@@ -889,58 +898,40 @@ body {
           transform: translateX(-30px) scale(0.86) skew(8deg);
 }
 
-.clip-text.reveal.left, .clip-text.reveal.right, .clip-text.reveal.top, .clip-text.reveal.top-left, .clip-text.reveal.bottom, .clip-text.reveal.center,
-.clip-text01.reveal.left,
-.clip-text01.reveal.right,
-.clip-text01.reveal.top,
-.clip-text01.reveal.top-left,
-.clip-text01.reveal.bottom,
-.clip-text01.reveal.center,
-.clip-text02.reveal.left,
-.clip-text02.reveal.right,
-.clip-text02.reveal.top,
-.clip-text02.reveal.top-left,
-.clip-text02.reveal.bottom,
-.clip-text02.reveal.center,
-.clip-text03.reveal.left,
-.clip-text03.reveal.right,
-.clip-text03.reveal.top,
-.clip-text03.reveal.top-left,
-.clip-text03.reveal.bottom,
-.clip-text03.reveal.center,
-.clip-text04.reveal.left,
-.clip-text04.reveal.right,
-.clip-text04.reveal.top,
-.clip-text04.reveal.top-left,
-.clip-text04.reveal.bottom,
-.clip-text04.reveal.center {
+.clip-js1.reveal.left, .clip-js1.reveal.right, .clip-js1.reveal.top, .clip-js1.reveal.top-left, .clip-js1.reveal.bottom, .clip-js1.reveal.center,
+.clip-js2.reveal.left,
+.clip-js2.reveal.right,
+.clip-js2.reveal.top,
+.clip-js2.reveal.top-left,
+.clip-js2.reveal.bottom,
+.clip-js2.reveal.center,
+.clip-text.reveal.left,
+.clip-text.reveal.right,
+.clip-text.reveal.top,
+.clip-text.reveal.top-left,
+.clip-text.reveal.bottom,
+.clip-text.reveal.center {
   -webkit-clip-path: inset(0);
           clip-path: inset(0);
 }
 
-.clip-text.reveal.circle,
-.clip-text01.reveal.circle,
-.clip-text02.reveal.circle,
-.clip-text03.reveal.circle,
-.clip-text04.reveal.circle {
+.clip-js1.reveal.circle,
+.clip-js2.reveal.circle,
+.clip-text.reveal.circle {
   -webkit-clip-path: circle(100% at 50% 50%);
           clip-path: circle(100% at 50% 50%);
 }
 
-.clip-text.reveal.skew,
-.clip-text01.reveal.skew,
-.clip-text02.reveal.skew,
-.clip-text03.reveal.skew,
-.clip-text04.reveal.skew {
+.clip-js1.reveal.skew,
+.clip-js2.reveal.skew,
+.clip-text.reveal.skew {
   -webkit-clip-path: polygon(0 0, 200% 0, 0 200%);
           clip-path: polygon(0 0, 200% 0, 0 200%);
 }
 
-.clip-text.reveal.transform,
-.clip-text01.reveal.transform,
-.clip-text02.reveal.transform,
-.clip-text03.reveal.transform,
-.clip-text04.reveal.transform {
+.clip-js1.reveal.transform,
+.clip-js2.reveal.transform,
+.clip-text.reveal.transform {
   -webkit-clip-path: polygon(0 0, 200% 0, 0 200%);
           clip-path: polygon(0 0, 200% 0, 0 200%);
   -webkit-transform: translateX(0) scale(1) skew(0);

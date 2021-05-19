@@ -10,20 +10,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/vendor/bootstrap-reboot.css">
-  <link rel="stylesheet" href="styles/loader.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+  <!-- svg -->
+  <div class="svg-animation">
+    <div class="svg-inner">
+      <svg class="mask" viewBox="0 0 512.45 188.72" id="move">
+        <defs>
+          <!-- アニメーション画像 -->
+          <mask id="clipMask">
+            <path class="cls-3"
+              d="M62.23,270l19,58.29,13.51-41.54L89.84,270l18.63,58.14L125.77,270l77.33,2.58-34.21,2.06-.21,23.2,32.23-.89-31.61,4v21.77l33.8-.62,65.77,1-4.09-54.86,27.68,46.65,27.68-46.65-4.09,58.14,44.18-.69,19.51-58,21.07,60.6-11.26-20.91-20.09-.18L442.67,270v56.53L474.2,270l-27.48,28,8.61-.15,25.51,33.39,39-59.34,34.46.55L519.86,276l-4.37,49.69L520.41,296l28.19.12-27.49,3.39-1.05,24.15,33.17-.82L64.85,382.48v57.36l40-53.93h43.08l-24.6,2.57L122,442.41,257.2,389l-16.41-4.55s-18.39,1.42-7.83,20.83l20,9.41s10,17.41-10.84,20.26S221,425.86,221,425.86l78.47-45.37v40.45s11.42,31.9,33.67,0l.57-42.73,45.82,7.7v52.86L384,386.2H397.6s23.3,13.41,1.14,26.82l-14.7.86,65.77-29.11H484l-35,3.14,1.14,47.65,1.71-25.24,28-3.74-25.64,7.17-.95,20.39,30.75.28,41.15-49.65L524,441l4.8-54.5L541,386.2s28.13,12.84,0,28.53H528.8l10.09,2.87,21.79,20.55"
+              transform="translate(-55.23 -260.69)" />
+          </mask>
+        </defs>
+        <!-- ベース画像 -->
+        <image xlink:href="/images/wemakeitsuper.svg" width="100%" height="100%" mask="url(#clipMask)" />
+      </svg>
+    </div>
+  </div>
+  <!-- /svg -->
   <!-------- HEADER -------->
   <header id="header" class="header">
-    <div class="logo__img">
-      <a href="http://riv-round.com/">
-        <img class="logo" src="/images/riv_logo.png" alt="">
-      </a>
-    </div>
     <!-- .mobile-container -->
-    <div class="mobile-container">
+    <div class="mobile-container clip-js2 top">
+      <div class="logo__img">
+        <a href="http://riv-round.com/">
+          <img class="logo" src="/images/riv_logo.png" alt="">
+        </a>
+      </div>
       <div class="mobile-button">
         <button class="mobile-menu__btn">
           <span></span>
@@ -33,7 +50,7 @@
       </div>
     </div>
     <!-- .pc-container -->
-    <div class="pc-container">
+    <div class="pc-container clip-js2 top">
       <div class="pc-header">
         <ul class="pc-header__list">
           <li class="pc-header__item"><a href="#value">VALUE</a></li>
@@ -49,27 +66,25 @@
 
   </header>
   <!-------- /#HEADER -------->
-
   <!-------- MAIN-CONTENTS -------->
   <div id="main-contents">
-    <div class="shutter"></div>
     <!-- top-view -->
     <section id="top-view" class="top-view">
-      <div class="top-view__wrap clip-text01 circle">
-        <div class="top-view__img ">
+      <div class="top-view__wrap">
+        <div class="top-view__img clip-js1 circle">
           <img src="images/topview@2x.jpg" alt="">
         </div>
         <div class="top-view__txtarea">
-          <p class="top-view__txt clip-text02 skew">
+          <p class="top-view__txt clip-js2 skew">
             最先端デザインの<br class="view-pc">webサイトを<br class="view-pc">サブスクで。
           </p>
         </div>
-        <div class="top-view-cv__txtarea clip-text04 left">
+        <div class="top-view-cv__txtarea clip-js2 left">
           <p class="top-view-cv__txt ">
             webサイトの概念を変える<br class="view-pc">洗練されたデザインを<br class="view-pc">ローコストで。
           </p>
         </div>
-        <div class="top-view-cv__img clip-text03 left">
+        <div class="top-view-cv__img clip-js2 left">
           <img src="/images/work.jpg" alt="">
         </div>
       </div>
@@ -78,7 +93,7 @@
     <!-- value -->
     <section id="value" class="value">
       <div class="value__inner u-inner">
-        <h2 class="value__title clip-text left">
+        <h2 class="value__title clip-js2eft">
           <p>RivRound</p>
           <p>Value Proposition</p>
           <span>RivRound(リブラウンド)が提供する価値</span>
@@ -294,11 +309,12 @@
   </div>
   <!------ /.mobile-menu ----->
 
+  <script src="/scripts/vendor/vivus.min.js"></script>
+  <script src="/scripts/libs/svg-animation.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
   <script src="/scripts/vendor/smooth-scroll.min.js"></script>
   <script src="/scripts/libs/mobile-menu.js"></script>
   <script src="/scripts/libs/scroll.js"></script>
-  <!-- <script src="/scripts/libs/smooth-scroll.js"></script> -->
   <script src="/scripts/libs/text-animation2.js"></script>
   <script src="/scripts/libs/parallax.js"></script>
   <script src="/scripts/main.js"></script>

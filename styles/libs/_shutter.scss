@@ -1,82 +1,10 @@
-// $bg_color: #fafafa;
-// $font_color: #333;
-
-// body {
-//   background-color: $bg_color;
-//   color: $font_color;
-//   text-align: center;
-// }
-// .shutter {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   // background-color: #1e1e1e;
-//   background-color: #395f91;
-//   z-index: 9999;
-//   animation: byeShutter 2.6s forwards;
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     bottom: 0;
-//     margin: auto;
-//     background-color: #fff;
-//     width: 0;
-//     height: 1px;
-//     animation: shutterOpen 2.6s forwards;
-//   }
-// }
-// .content {
-//   animation: contentScale 2.6s forwards;
-// }
-// @keyframes byeShutter {
-//   70% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//     display: none;
-//     z-index: -1;
-//   }
-// }
-// @keyframes shutterOpen {
-//   0% {
-//     width: 0;
-//     height: 1px;
-//   }
-//   50% {
-//     width: 100%;
-//     height: 1px;
-//   }
-//   90% {
-//     width: 100%;
-//     height: 100%;
-//   }
-//   100% {
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
-
-// @keyframes contentScale {
-//   70% {
-//     transform: perspective(800px) scale(0.9) rotateX(15deg);
-//   }
-//   100% {
-//     transform: perspective(800px) scale(1) rotateX(0);
-//   }
-// }
-
-// <!------------- 別バージョン  ---------------->
-$bg_color: #FFF;
+$bg_color: #fafafa;
 $font_color: #333;
 
 body {
   background-color: $bg_color;
   color: $font_color;
+  text-align: center;
 }
 
 .shutter {
@@ -85,38 +13,27 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2b2c30;
-  z-index: 99999;
-  animation: byeShutter 2.5s forwards;
+  // background-color: #1e1e1e;
+  background-color: #395f91;
+  z-index: 9999;
+  animation: byeShutter 2.6s forwards;
 
-  &::before,
-  &::after {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     margin: auto;
-  }
-
-  &::before {
-    background-color: #d1e2e2;
+    background-color: #fff;
     width: 0;
     height: 1px;
-    animation: shutterOpen1 2.5s forwards;
-  }
-
-  &::after {
-    width: 120%;
-    height: 0;
-    margin-left: -10%;
-    background-color: #f3f3f3;
-    animation: shutterOpen2 2.5s forwards;
+    animation: shutterOpen 2.6s forwards;
   }
 }
 
 .content {
-  animation: contentScale 2.5s forwards;
+  animation: contentScale 2.6s forwards;
 }
 
 @keyframes byeShutter {
@@ -131,7 +48,7 @@ body {
   }
 }
 
-@keyframes shutterOpen1 {
+@keyframes shutterOpen {
   0% {
     width: 0;
     height: 1px;
@@ -153,26 +70,6 @@ body {
   }
 }
 
-@keyframes shutterOpen2 {
-  60% {
-    width: 120%;
-    height: 0;
-    transform: rotate(5deg);
-  }
-
-  90% {
-    width: 120%;
-    height: 100%;
-    transform: rotate(-5deg);
-  }
-
-  100% {
-    width: 120%;
-    height: 100%;
-    transform: rotate(-5deg);
-  }
-}
-
 @keyframes contentScale {
   70% {
     transform: perspective(800px) scale(0.9) rotateX(15deg);
@@ -182,3 +79,116 @@ body {
     transform: perspective(800px) scale(1) rotateX(0);
   }
 }
+
+// <!------------- 別バージョン  ---------------->
+// $bg_color: #FFF;
+// $font_color: #333;
+
+// body {
+//   background-color: $bg_color;
+//   color: $font_color;
+// }
+
+// .shutter {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: #2b2c30;
+//   z-index: 99999;
+//   animation: byeShutter 2.5s forwards;
+
+//   &::before,
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     margin: auto;
+//   }
+
+//   &::before {
+//     background-color: #d1e2e2;
+//     width: 0;
+//     height: 1px;
+//     animation: shutterOpen1 2.5s forwards;
+//   }
+
+//   &::after {
+//     width: 120%;
+//     height: 0;
+//     margin-left: -10%;
+//     background-color: #f3f3f3;
+//     animation: shutterOpen2 2.5s forwards;
+//   }
+// }
+
+// .content {
+//   animation: contentScale 2.5s forwards;
+// }
+
+// @keyframes byeShutter {
+//   70% {
+//     opacity: 1;
+//   }
+
+//   100% {
+//     opacity: 0;
+//     display: none;
+//     z-index: -1;
+//   }
+// }
+
+// @keyframes shutterOpen1 {
+//   0% {
+//     width: 0;
+//     height: 1px;
+//   }
+
+//   50% {
+//     width: 100%;
+//     height: 1px;
+//   }
+
+//   90% {
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   100% {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+// @keyframes shutterOpen2 {
+//   60% {
+//     width: 120%;
+//     height: 0;
+//     transform: rotate(5deg);
+//   }
+
+//   90% {
+//     width: 120%;
+//     height: 100%;
+//     transform: rotate(-5deg);
+//   }
+
+//   100% {
+//     width: 120%;
+//     height: 100%;
+//     transform: rotate(-5deg);
+//   }
+// }
+
+// @keyframes contentScale {
+//   70% {
+//     transform: perspective(800px) scale(0.9) rotateX(15deg);
+//   }
+
+//   100% {
+//     transform: perspective(800px) scale(1) rotateX(0);
+//   }
+// }
