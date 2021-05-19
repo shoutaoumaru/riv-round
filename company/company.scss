@@ -1,0 +1,93 @@
+.header {
+  .pc-container {
+    margin-left: 45vw;
+  }
+}
+
+.c-top-view {
+  margin-top: 20vw;
+  margin: 0 auto;
+
+  &__img {
+    margin: 0 auto;
+    height: 280px;
+    max-width: 1080px;
+    margin-top: 24vw;
+    background-image: url(/images/city@mobile.jpg);
+    background-size: 151%;
+    background-repeat: no-repeat;
+    transform: rotate(353deg);
+  }
+
+  @media (min-width:600px) {
+    &__img {
+      height: 327px;
+      background-size: 105%;
+    }
+  }
+
+  @media (min-width:960px) {
+    &__img {
+      height: 327px;
+      background-size: 105%;
+    }
+  }
+
+  @media (min-width:1200px) {
+    &__img {
+      height: 327px;
+      background-size: 90%;
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(3, 3, 131);
+    opacity: .2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .title {
+    font-size: 3.8rem;
+    letter-spacing: 4px;
+    color: #fff;
+    transform: rotate(7deg);
+  }
+}
+
+.company {
+  margin-top: 20vw;
+
+  &__title {
+    text-align: center;
+
+    .en {
+      font-size: 2rem;
+      letter-spacing: 5px;
+      margin-bottom: 0;
+    }
+
+    .ja {
+      margin-top: 0;
+      color: rgb(158, 158, 158);
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__list {
+    padding: 10vw 0 15vw 6vw;
+
+    & a {
+      display: block;
+      color: #333;
+    }
+  }
+}

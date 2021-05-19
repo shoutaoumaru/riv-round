@@ -1,0 +1,53 @@
+/******************************************************************
+
+Stylesheet: 1200px以上のモニタで適用
+
+******************************************************************/
+
+.header {
+  height: 120px;
+
+  .logo__img {
+    top: 33%;
+    left: 9%;
+
+    .logo {
+      height: 5vw;
+      width: 15vw;
+      object-fit: cover;
+    }
+
+  }
+}
+
+.c-top-view {
+  &__img {
+    height: 280px;
+    margin-top: 8vw;
+    background-image: url(/images/city@mobile.jpg);
+    background-size: 151%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: rotate(353deg);
+  }
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(3, 3, 131);
+    opacity: .2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .title {
+    font-size: 3.8rem;
+    letter-spacing: 4px;
+    color: #fff;
+    transform: rotate(7deg);
+  }
+}
