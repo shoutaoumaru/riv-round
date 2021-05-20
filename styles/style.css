@@ -17,13 +17,17 @@
 }
 
 .svg-animation {
+  display: none;
+}
+
+.pace-done .svg-animation {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: #d49a9a;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,18 +41,17 @@
           animation: byeOpening 6s forwards;
 }
 
-.svg-animation .svg-inner {
-  padding: 10vw;
-  margin: 0 auto;
+.pace-done .svg-animation .svg-inner {
+  padding: 35px;
 }
 
-.svg-animation .svg-inner svg {
+.pace-done .svg-animation .svg-inner svg {
   height: 100%;
   width: 100%;
 }
 
 @-webkit-keyframes byeOpening {
-  70% {
+  50% {
     opacity: 1;
   }
   100% {
@@ -59,7 +62,7 @@
 }
 
 @keyframes byeOpening {
-  70% {
+  50% {
     opacity: 1;
   }
   100% {

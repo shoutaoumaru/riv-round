@@ -16,31 +16,36 @@
 }
 
 .svg-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99999;
-  background-color: rgb(212, 154, 154);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: byeOpening 6s forwards;
+  display: none;
+}
 
-  & .svg-inner {
-    padding: 10vw;
-    margin: 0 auto;
+.pace-done {
+  .svg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: byeOpening 6s forwards;
 
-    & svg {
-      height: 100%;
-      width: 100%;
+    & .svg-inner {
+      padding: 35px;
+
+      & svg {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }
 
 @keyframes byeOpening {
-  70% {
+  50% {
     opacity: 1;
   }
 
