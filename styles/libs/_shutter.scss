@@ -1,8 +1,7 @@
-$bg_color: #fafafa;
+$bg_color: #fff;
 $font_color: #333;
 
 body {
-  background-color: $bg_color;
   color: $font_color;
   text-align: center;
 }
@@ -13,8 +12,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  // background-color: #1e1e1e;
-  background-color: #395f91;
+  background-color: #4c4d4e;
   z-index: 9999;
   animation: byeShutter 2.6s forwards;
 

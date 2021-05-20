@@ -33,8 +33,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: byeOpening 5s forwards;
-          animation: byeOpening 5s forwards;
+  -webkit-animation: byeOpening 5.6s forwards;
+          animation: byeOpening 5.6s forwards;
 }
 
 .svg-animation .svg-inner {
@@ -47,17 +47,14 @@
   width: 100%;
 }
 
-.outview.svg-animation {
-  -webkit-transition: all 2s;
-  transition: all 2s;
-  display: none;
-}
-
 @-webkit-keyframes byeOpening {
   0% {
     opacity: 0;
   }
-  70% {
+  20% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
@@ -71,7 +68,10 @@
   0% {
     opacity: 0;
   }
-  70% {
+  20% {
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
@@ -637,7 +637,6 @@ Stylesheet: ベーススタイル
 }
 
 body {
-  background-color: #fafafa;
   color: #333;
   text-align: center;
 }
@@ -648,7 +647,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #395f91;
+  background-color: #4c4d4e;
   z-index: 9999;
   -webkit-animation: byeShutter 2.6s forwards;
           animation: byeShutter 2.6s forwards;
