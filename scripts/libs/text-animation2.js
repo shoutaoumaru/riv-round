@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     const loadAnimation = document.querySelector('.clip-js1');
     loadAnimation.classList.toggle('reveal');
-  }, 4500);
+  }, 5000);
 
   const loadAnimation2 = document.querySelectorAll('.clip-js2');
   loadAnimation2.forEach(function (element) {
     setTimeout(() => {
       element.classList.add("reveal");
-    }, 5500)
+    }, 6000)
   });
 });
