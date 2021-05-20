@@ -1,6 +1,6 @@
 new Vivus('move', {
   type: 'scenario-sync',
-  duration: 170,
+  duration: 200,
   forceRender: false,
   animTimingFunction: Vivus.EASE
 })

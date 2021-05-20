@@ -22,11 +22,11 @@
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: #fff;
+  background-color: rgb(212, 154, 154);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: byeOpening 5.6s forwards;
+  animation: byeOpening 6s forwards;
 
   & .svg-inner {
     padding: 10vw;
@@ -40,16 +40,7 @@
 }
 
 @keyframes byeOpening {
-
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 1;
-  }
-
-  50% {
+  70% {
     opacity: 1;
   }
 
