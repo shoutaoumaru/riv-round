@@ -19,6 +19,10 @@
   display: none;
 }
 
+.pace-running .superwrapper {
+  display: none;
+}
+
 .pace-done .svg-animation {
   position: fixed;
   top: 0;
