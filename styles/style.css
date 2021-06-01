@@ -19,7 +19,7 @@
   display: none;
 }
 
-.pace-running .superwrapper {
+.pace-ruuning .superwrapper {
   display: none;
 }
 
@@ -192,6 +192,10 @@ Stylesheet: ベーススタイル
   padding-bottom: 60px !important;
 }
 
+.rule-link {
+  font-size: .8rem;
+}
+
 .content-width, .top-view, .value, .creative, .concept, .price, .process {
   margin: 0 auto;
   max-width: 1070px;
@@ -358,7 +362,7 @@ Stylesheet: ベーススタイル
 }
 
 .price {
-  background-color: #F4FDFD;
+  background-color: #ffffff;
 }
 
 .price__title {

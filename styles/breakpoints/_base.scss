@@ -35,6 +35,10 @@ Stylesheet: ベーススタイル
   padding-bottom: 60px !important;
 }
 
+.rule-link {
+  font-size: .8rem;
+}
+
 .content-width {
   margin: 0 auto;
   max-width: $contentMaxWidth;
@@ -238,7 +242,7 @@ Stylesheet: ベーススタイル
 .price {
   @extend .content-width;
   @extend .pb-lg;
-  background-color: #F4FDFD;
+  background-color: #ffffff;
 
   &__title {
     position: relative;

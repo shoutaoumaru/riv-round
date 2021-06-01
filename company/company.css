@@ -97,4 +97,28 @@
   display: block;
   color: #333;
 }
+
+.p-rule {
+  margin-top: 20vw;
+  letter-spacing: 2px;
+  line-height: 2;
+  font-size: .6rem;
+  text-align: left;
+}
+
+.p-rule__title {
+  margin-top: 10vw;
+}
+
+.p-rule__inner {
+  padding: 20vw 10vw;
+}
+
+.p-rule-item-text {
+  padding-bottom: 3vw;
+}
+
+.p-rule-item-text a {
+  color: #1d1d1d;
+}
 /*# sourceMappingURL=company.css.map */

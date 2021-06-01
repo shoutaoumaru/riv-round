@@ -91,3 +91,29 @@
     }
   }
 }
+
+//* * * * * * * 利用規約 * * * *  * * * * * * * * *
+
+.p-rule {
+  margin-top: 20vw;
+  letter-spacing: 2px;
+  line-height: 2;
+  font-size: .6rem;
+  text-align: left;
+
+  &__title {
+    margin-top: 10vw;
+  }
+
+  &__inner {
+    padding: 20vw 10vw;
+  }
+
+  &-item-text {
+    padding-bottom: 3vw;
+
+    & a {
+      color: rgb(29, 29, 29);
+    }
+  }
+}
