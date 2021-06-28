@@ -160,6 +160,11 @@ ul {
 Stylesheet: ベーススタイル
 
 ******************************************************************/
+.superwrapper {
+  overflow: hidden;
+  max-width: 1200px;
+}
+
 .font-sm, .value__title span, .creative__title > span, .creative__txt, .concept__txt, .price__title > span, .price__txt, .price-menu p, .footer .back-btn__link p, .footer__copy {
   font-size: 14px;
 }
