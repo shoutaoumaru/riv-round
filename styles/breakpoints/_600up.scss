@@ -179,3 +179,19 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 .hero__footer {
   top: 29%;
 }
+
+.footer {
+  &__nav {
+    & li {
+      & a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__logo {
+    & img {
+      width: 9%;
+    }
+  }
+}

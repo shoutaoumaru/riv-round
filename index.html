@@ -2,9 +2,21 @@
 <html lang="ja">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KCX8PZD11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3KCX8PZD11');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RivRound</title>
+  <title>RivRound株式会社 | ホームページ制作 サブスクリプション</title>
   <meta name="desctiption" content="webサイト制作会社、RivRound。ホームページ制作、インターネット広告運用代行のことなどウェブに関する事はすべてお任せください。">
   <link rel="shortcut icon" href="/images/riv_fav.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,7 +27,6 @@
 
 <body>
   <div class="superwrapper">
-    <!-- svg -->
     <div class="svg-animation">
       <div class="svg-inner">
         <svg class="mask" viewBox="0 0 513.78 161.43" id="move">
@@ -35,15 +46,14 @@
         </svg>
       </div>
     </div>
-    <!-- /svg -->
-    <!-------- HEADER -------->
+    <!-- /.svg-animation -->
     <header id="header" class="header">
       <div class="logo__img clip-js2 top">
         <a href="http://riv-round.com/">
           <img class="logo" src="/images/riv_logo.png" alt="">
         </a>
       </div>
-      <!-- .mobile-container -->
+      <!-- /.logo__img -->
       <div class="mobile-container clip-js2 top">
         <div class="mobile-button">
           <button class="mobile-menu__btn">
@@ -53,21 +63,16 @@
           </button>
         </div>
       </div>
-      <!-- .pc-container -->
+      <!-- /.mobile-container -->
       <div class="pc-container clip-js2 top">
         <div class="pc-header">
           <ul class="pc-header__list">
-            <li class="pc-header__item"><a href="#value">VALUE</a></li>
-            <li class="pc-header__item"><a href="#creative">SERVICE</a></li>
-            <li class="pc-header__item"><a href="#price">PRICE</a></li>
-            <li class="pc-header__item"><a href="#footer">CONTACT</a></li>
-            <li class="pc-header__item"><a href="/conpany/company.html">COMPANY</a></li>
+            <li class="pc-header__item"><a href="mailto:info@riv-round.com">CONTACT</a></li>
+            <li class="pc-header__item"><a href="http://riv-round.com/company/company">COMPANY</a></li>
           </ul>
         </div>
       </div>
       <!-- /.pc-container -->
-      <!-- /.mobile-container -->
-
     </header>
     <!-------- /#HEADER -------->
     <!-------- MAIN-CONTENTS -------->
@@ -266,17 +271,9 @@
         <nav class="footer__nav">
           <ul>
             <li><a href="http://riv-round.com/company/company">COMPANY</a></li>
-            <li><a data-scrolls href="#value">VALUE</a></li>
-            <li><a href="#concept">CONCEPT</a></li>
-            <li><a href="#price">PRICE</a></li>
             <li><a class="rule-link" href="http://riv-round.com/company/rule">利用規約</a></li>
           </ul>
         </nav>
-        <!-- <div class="back-btn">
-        <a class="back-btn__link" href="#header">
-          <p>TOP</p>
-        </a>
-      </div> -->
         <div class="footer__logo">
           <img src="/images/riv_logo_02.png" alt="">
         </div>
@@ -286,24 +283,14 @@
       </div>
     </footer>
     <!-------- /#FOOTER -------->
-    <!------ .mobile-menu ------>
     <div class="mobile-menu">
       <nav class="mobile-menu__nav">
         <ul class="mobile-menu__ul">
-          <li class="mobile-menu__li link01">
-            <a href="http://riv-round.com/company/company">COMPANY</a>
+          <li class="mobile-menu__li">
+            <a href="mailto:info@riv-round.com">CONTACT</a>
           </li>
           <li class="mobile-menu__li">
-            <a href="#value">VALUE</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#creative">SERVICE</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#price">PRICE</a>
-          </li>
-          <li class="mobile-menu__li">
-            <a href="#footer">CONTACT</a>
+            <a href="http://riv-round.com/company/company">CAMPANY</a>
           </li>
         </ul>
         <address>
@@ -318,7 +305,6 @@
   <script src="/scripts/vendor/vivus.min.js"></script>
   <script src="/scripts/libs/svg-animation.js"></script>
   <script src="/scripts/vendor/simpleParallax.min.js"></script>
-  <script src="/scripts/vendor/smooth-scroll.min.js"></script>
   <script src="/scripts/libs/mobile-menu.js"></script>
   <script src="/scripts/libs/scroll.js"></script>
   <script src="/scripts/libs/text-animation2.js"></script>
@@ -327,6 +313,3 @@
 </body>
 
 </html>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]');
-</script>
